@@ -1,5 +1,4 @@
 import {
-  ArrowDownRight,
   ArrowRight,
   BarChart3,
   Check,
@@ -8,7 +7,7 @@ import {
   Sparkles,
   Zap,
 } from "lucide-react";
-import { SignUpButton } from "@clerk/nextjs";
+import { SignInButton, SignUpButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -72,19 +71,20 @@ export default async function Home() {
             <SignUpButton mode="modal">
               <Button
                 size="lg"
-                className="h-12 gap-2 rounded-full bg-sky-400 px-6 text-base font-semibold text-zinc-950 hover:bg-sky-300"
+                className="h-12 rounded-full bg-sky-400 px-6 text-base font-semibold text-zinc-950 hover:bg-sky-300"
               >
-                Get started for free
-                <ArrowRight className="size-4" />
+                Sign up
               </Button>
             </SignUpButton>
-            <a
-              className="inline-flex h-12 items-center gap-2 rounded-full px-4 text-sm font-medium text-zinc-300 transition-colors hover:text-white"
-              href="#features"
-            >
-              Explore features
-              <ArrowDownRight className="size-4" />
-            </a>
+            <SignInButton mode="modal">
+              <Button
+                size="lg"
+                variant="ghost"
+                className="h-12 rounded-full px-6 text-base text-zinc-300 hover:text-white"
+              >
+                Sign in
+              </Button>
+            </SignInButton>
           </div>
           <div className="mt-7 flex items-center gap-2 text-sm text-zinc-500">
             <Check className="size-4 text-emerald-400" />
