@@ -34,6 +34,8 @@ working in, create one in `docs/` capturing the conventions you establish.
 - Before writing routing/caching/data-fetching code, check
   `node_modules/next/dist/docs/` for the Next 16 behavior — don't assume
   pre-16 APIs still apply.
+- NEVER use `middleware.ts` — it's deprecated in this Next.js version. Use
+  `proxy.ts` (see the existing [proxy.ts](proxy.ts)) instead.
 - Use the `@/*` path alias instead of deep relative imports.
 - Run queries through the shared Drizzle client in `db/index.ts`; never add a
   second DB client or expose it to client components.
