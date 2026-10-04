@@ -1,3 +1,7 @@
+---
+description: Guidelines and best practices for using UI components in the project.
+---
+
 # UI Components
 
 ## shadcn/ui only

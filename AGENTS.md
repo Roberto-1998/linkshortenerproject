@@ -11,23 +11,24 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 # Project Standards
 
 This is a link shortener app: Next.js 16 (App Router), Clerk auth, Drizzle
-ORM + Neon Postgres, Tailwind v4 + shadcn/ui. Detailed, topic-specific rules
-live in `docs/` as separate `.md` files (one per topic: project structure,
-Next.js conventions, database, authentication, UI/styling, code style, etc.).
+ORM + Neon Postgres, Tailwind v4 + shadcn/ui. Topic-specific project rules
+live in `.github/instructions/`.
 
-**ALWAYS check `docs/` for a relevant `.md` file and read it BEFORE
-generating any code.** Don't rely on general training-data knowledge for
+**ALWAYS check `.github/instructions/` for relevant guidance and read it
+BEFORE generating code.** Don't rely on general training-data knowledge for
 these topics — several defaults in this project differ from older
-Next.js/Clerk/Tailwind versions. If no doc exists yet for the area you're
-working in, create one in `docs/` capturing the conventions you establish.
+Next.js/Clerk/Tailwind versions. If guidance is missing, update this file or
+the relevant instruction file; do not recreate the deleted `/docs` folder.
 
-## Docs index
+## Project instruction files
 
-- [docs/authentication.md](docs/authentication.md) — Clerk-only auth, protected
+- [.github/instructions/authentication.md](.github/instructions/authentication.md) — Clerk-only auth, protected
   `/dashboard` route, homepage redirect for signed-in users, modal-only
   sign-in/up.
-- [docs/ui-components.md](docs/ui-components.md) — shadcn/ui-only components,
+- [.github/instructions/ui-components.md](.github/instructions/ui-components.md) — shadcn/ui-only components,
   no custom components, adding components via the shadcn CLI.
+- [.github/instructions/data-fetching.instructions.md](.github/instructions/data-fetching.instructions.md) — server-side
+  data fetching through helpers in `/data` using Drizzle ORM.
 
 ## Core rules (apply everywhere)
 

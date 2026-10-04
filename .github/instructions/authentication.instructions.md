@@ -1,3 +1,7 @@
+---
+description: Read this file for the authentication guidelines and best practices in the project.
+---
+
 # Authentication
 
 ## Clerk only
